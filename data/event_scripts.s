@@ -1074,3 +1074,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/PorytilesTestMap/scripts.inc"
+
+	.include "data/maps/Route102_Shrub_Base/scripts.inc"
+
+	.include "data/maps/Glimmer_Cave/scripts.inc"

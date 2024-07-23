@@ -93,14 +93,16 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "PorytilesTestMap"
+    "PorytilesTestMap",
+    "Route102_Shrub_Base"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+    "LittlerootTown_ProfessorBirchsLab",
+    "Glimmer_Cave"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

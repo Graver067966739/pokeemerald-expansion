@@ -858,3 +858,25 @@ const struct Tileset gTileset_Desert =
     .metatileAttributes = gMetatileAttributes_Desert,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Arid_Terrain =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Arid_Terrain,
+    .palettes = gTilesetPalettes_Arid_Terrain,
+    .metatiles = gMetatiles_Arid_Terrain,
+    .metatileAttributes = gMetatileAttributes_Arid_Terrain,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Arid_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Arid_Town,
+    .palettes = gTilesetPalettes_Arid_Town,
+    .metatiles = gMetatiles_Arid_Town,
+    .metatileAttributes = gMetatileAttributes_Arid_Town,
+    .callback = NULL,
+};

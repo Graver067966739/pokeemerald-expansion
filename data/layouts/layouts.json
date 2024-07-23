@@ -96,8 +96,8 @@
       "name": "LittlerootTown_Layout",
       "width": 45,
       "height": 35,
-      "primary_tileset": "gTileset_Desert",
-      "secondary_tileset": "gTileset_NavelRock",
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
     },
@@ -106,7 +106,7 @@
       "name": "OldaleTown_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_Desert",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
@@ -166,8 +166,8 @@
       "name": "Route101_Layout",
       "width": 20,
       "height": 35,
-      "primary_tileset": "gTileset_Desert",
-      "secondary_tileset": "gTileset_MirageTower",
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
       "border_filepath": "data/layouts/Route101/border.bin",
       "blockdata_filepath": "data/layouts/Route101/map.bin"
     },
@@ -176,8 +176,8 @@
       "name": "Route102_Layout",
       "width": 50,
       "height": 20,
-      "primary_tileset": "gTileset_Desert",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
       "border_filepath": "data/layouts/Route102/border.bin",
       "blockdata_filepath": "data/layouts/Route102/map.bin"
     },
@@ -4420,6 +4420,26 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE102_SHRUB_BASE",
+      "name": "Route102_Shrub_Base_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseShrub",
+      "border_filepath": "data/layouts/Route102_Shrub_Base/border.bin",
+      "blockdata_filepath": "data/layouts/Route102_Shrub_Base/map.bin"
+    },
+    {
+      "id": "LAYOUT_GLIMMER_CAVE",
+      "name": "Glimmer_Cave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Glimmer_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Glimmer_Cave/map.bin"
     }
   ]
 }

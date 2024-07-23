@@ -1691,3 +1691,41 @@ const u16 gTilesetPalettes_Desert[][16] =
 };
 
 const u32 gTilesetTiles_Desert[] = INCBIN_U32("data/tilesets/primary/desert/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Arid_Terrain[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/arid_terrain/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Arid_Terrain[] = INCBIN_U32("data/tilesets/primary/arid_terrain/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Arid_Town[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/arid_town/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Arid_Town[] = INCBIN_U32("data/tilesets/secondary/arid_town/tiles.4bpp.lz");
