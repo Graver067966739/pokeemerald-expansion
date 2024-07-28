@@ -125,6 +125,11 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_ISOLATED_HORIZONTAL_RAIL]        = TILE_FLAG_UNUSED,
     [MB_VERTICAL_RAIL]                   = TILE_FLAG_UNUSED,
     [MB_HORIZONTAL_RAIL]                 = TILE_FLAG_UNUSED,
+    [MB_UNUSED_A1]                       = TILE_FLAG_UNUSED,
+    [MB_UNUSED_A2]                       = TILE_FLAG_UNUSED,
+    [MB_UNUSED_A3]                       = TILE_FLAG_UNUSED,
+    [MB_UNUSED_A4]                       = TILE_FLAG_UNUSED,
+    [MB_UNUSED_A5]                       = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -166,7 +171,7 @@ bool8 MetatileBehavior_IsJumpNorth(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsJumpSouth(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_JUMP_SOUTH)
+    if (metatileBehavior == MB_JUMP_SOUTH || metatileBehavior == MB_UNUSED_A1)
         return TRUE;
     else
         return FALSE;
@@ -440,7 +445,7 @@ bool8 MetatileBehavior_IsEastwardCurrent(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsSlideNorth(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_SLIDE_NORTH)
+    if (metatileBehavior == MB_SLIDE_NORTH || metatileBehavior == MB_UNUSED_A2 || metatileBehavior == MB_UNUSED_A3)
         return TRUE;
     else
         return FALSE;
@@ -448,7 +453,7 @@ bool8 MetatileBehavior_IsSlideNorth(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsSlideSouth(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_SLIDE_SOUTH)
+    if (metatileBehavior == MB_SLIDE_SOUTH || metatileBehavior == MB_UNUSED_A1 || metatileBehavior == MB_UNUSED_A4 || metatileBehavior == MB_UNUSED_A5)
         return TRUE;
     else
         return FALSE;
@@ -936,7 +941,9 @@ bool8 MetatileBehavior_IsEastBlocked(u8 metatileBehavior)
      || metatileBehavior == MB_IMPASSABLE_NORTHEAST
      || metatileBehavior == MB_IMPASSABLE_SOUTHEAST
      || metatileBehavior == MB_IMPASSABLE_WEST_AND_EAST
-     || metatileBehavior == MB_SECRET_BASE_BREAKABLE_DOOR)
+     || metatileBehavior == MB_SECRET_BASE_BREAKABLE_DOOR
+     || metatileBehavior == MB_UNUSED_A2
+     || metatileBehavior == MB_UNUSED_A5)
         return TRUE;
     else
         return FALSE;
@@ -948,7 +955,9 @@ bool8 MetatileBehavior_IsWestBlocked(u8 metatileBehavior)
      || metatileBehavior == MB_IMPASSABLE_NORTHWEST
      || metatileBehavior == MB_IMPASSABLE_SOUTHWEST
      || metatileBehavior == MB_IMPASSABLE_WEST_AND_EAST
-     || metatileBehavior == MB_SECRET_BASE_BREAKABLE_DOOR)
+     || metatileBehavior == MB_SECRET_BASE_BREAKABLE_DOOR
+     || metatileBehavior == MB_UNUSED_A3
+     || metatileBehavior == MB_UNUSED_A4)
         return TRUE;
     else
         return FALSE;
@@ -959,7 +968,8 @@ bool8 MetatileBehavior_IsNorthBlocked(u8 metatileBehavior)
     if (metatileBehavior == MB_IMPASSABLE_NORTH
      || metatileBehavior == MB_IMPASSABLE_NORTHEAST
      || metatileBehavior == MB_IMPASSABLE_NORTHWEST
-     || metatileBehavior == MB_IMPASSABLE_SOUTH_AND_NORTH)
+     || metatileBehavior == MB_IMPASSABLE_SOUTH_AND_NORTH
+     || metatileBehavior == MB_UNUSED_A1)
         return TRUE;
     else
         return FALSE;
