@@ -94,7 +94,12 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "PorytilesTestMap",
-    "Route102_Shrub_Base"
+    "Route102_Shrub_Base",
+    "RadiaVillage",
+    "MountainPass",
+    "BloomMountainEast",
+    "BannerRiver",
+    "DesertPass"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

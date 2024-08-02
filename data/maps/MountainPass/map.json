@@ -1,0 +1,39 @@
+{
+  "id": "MAP_MOUNTAIN_PASS",
+  "name": "MountainPass",
+  "layout": "LAYOUT_MOUNTAIN_PASS",
+  "music": "MUS_RG_SEVII_67",
+  "region_map_section": "MAPSEC_MOUNTAIN_PASS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_RADIA_VILLAGE",
+      "offset": -17,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_BLOOM_MOUNTAIN_EAST",
+      "offset": -11,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

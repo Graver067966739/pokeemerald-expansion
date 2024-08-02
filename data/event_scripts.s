@@ -1078,3 +1078,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route102_Shrub_Base/scripts.inc"
 
 	.include "data/maps/Glimmer_Cave/scripts.inc"
+
+	.include "data/maps/RadiaVillage/scripts.inc"
+
+	.include "data/maps/MountainPass/scripts.inc"
+
+	.include "data/maps/BloomMountainEast/scripts.inc"
+
+	.include "data/maps/BannerRiver/scripts.inc"
+
+	.include "data/maps/DesertPass/scripts.inc"

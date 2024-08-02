@@ -706,8 +706,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_PALLET_TOWN",
-      "name": "PALLET TOWN",
+      "map_section": "MAPSEC_RADIA_VILLAGE ",
+      "name": "RADIA VILLAGE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -812,40 +812,40 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_1",
-      "name": "ROUTE 1",
+      "map_section": "MAPSEC_MOUNTAIN_PASS",
+      "name": "MOUNTAIN PASS",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_2",
-      "name": "ROUTE 2",
+      "map_section": "MAPSEC_BLOOM_MOUNTAIN_EAST",
+      "name": "BLOOM MOUNTAIN EAST",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_3",
-      "name": "ROUTE 3",
+      "map_section": "MAPSEC_BLOOM_MOUNTAIN_SOUTH",
+      "name": "BLOOM MOUNTAIN SOUTH",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_4",
-      "name": "ROUTE 4",
+      "map_section": "MAPSEC_DESERT_PASS",
+      "name": "DESERT PASS",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_5",
-      "name": "ROUTE 5",
+      "map_section": "MAPSEC_BANNER_RIVER",
+      "name": "BANNER RIVER",
       "x": 0,
       "y": 0,
       "width": 1,

@@ -65,6 +65,11 @@
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
 #define MAP_PORYTILES_TEST_MAP  (57 | (0 << 8))
 #define MAP_ROUTE102_SHRUB_BASE (58 | (0 << 8))
+#define MAP_RADIA_VILLAGE       (59 | (0 << 8))
+#define MAP_MOUNTAIN_PASS       (60 | (0 << 8))
+#define MAP_BLOOM_MOUNTAIN_EAST (61 | (0 << 8))
+#define MAP_BANNER_RIVER        (62 | (0 << 8))
+#define MAP_DESERT_PASS         (63 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

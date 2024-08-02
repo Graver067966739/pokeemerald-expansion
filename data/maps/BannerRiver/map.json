@@ -1,0 +1,34 @@
+{
+  "id": "MAP_BANNER_RIVER",
+  "name": "BannerRiver",
+  "layout": "LAYOUT_BANNER_RIVER",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_BANNER_RIVER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_BLOOM_MOUNTAIN_EAST",
+      "offset": -13,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

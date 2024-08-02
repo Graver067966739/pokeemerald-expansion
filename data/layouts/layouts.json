@@ -4440,6 +4440,56 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Glimmer_Cave/border.bin",
       "blockdata_filepath": "data/layouts/Glimmer_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_RADIA_VILLAGE",
+      "name": "RadiaVillage_Layout",
+      "width": 45,
+      "height": 50,
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
+      "border_filepath": "data/layouts/RadiaVillage/border.bin",
+      "blockdata_filepath": "data/layouts/RadiaVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOUNTAIN_PASS",
+      "name": "MountainPass_Layout",
+      "width": 50,
+      "height": 26,
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
+      "border_filepath": "data/layouts/MountainPass/border.bin",
+      "blockdata_filepath": "data/layouts/MountainPass/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLOOM_MOUNTAIN_EAST",
+      "name": "BloomMountainEast_Layout",
+      "width": 45,
+      "height": 50,
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
+      "border_filepath": "data/layouts/BloomMountainEast/border.bin",
+      "blockdata_filepath": "data/layouts/BloomMountainEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_BANNER_RIVER",
+      "name": "BannerRiver_Layout",
+      "width": 40,
+      "height": 100,
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
+      "border_filepath": "data/layouts/BannerRiver/border.bin",
+      "blockdata_filepath": "data/layouts/BannerRiver/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESERT_PASS",
+      "name": "DesertPass_Layout",
+      "width": 20,
+      "height": 38,
+      "primary_tileset": "gTileset_Arid_Terrain",
+      "secondary_tileset": "gTileset_Arid_Town",
+      "border_filepath": "data/layouts/DesertPass/border.bin",
+      "blockdata_filepath": "data/layouts/DesertPass/map.bin"
     }
   ]
 }
