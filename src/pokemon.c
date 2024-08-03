@@ -3344,6 +3344,7 @@ u8 GiveMonToPlayer(struct Pokemon *mon)
 }
 
 u8 CopyMonToPC(struct Pokemon *mon)
+u8 CopyMonToPC(struct Pokemon *mon)
 {
     s32 boxNo, boxPos;
 
