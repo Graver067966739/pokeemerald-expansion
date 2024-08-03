@@ -1729,3 +1729,22 @@ const u16 gTilesetPalettes_Arid_Town[][16] =
 };
 
 const u32 gTilesetTiles_Arid_Town[] = INCBIN_U32("data/tilesets/secondary/arid_town/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Grassy_Terrain[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/grassy_terrain/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Grassy_Terrain[] = INCBIN_U32("data/tilesets/primary/grassy_terrain/tiles.4bpp.lz");

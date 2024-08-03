@@ -1090,3 +1090,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/BannerRiver/scripts.inc"
 
 	.include "data/maps/DesertPass/scripts.inc"
+
+	.include "data/maps/BloomMountainSouth/scripts.inc"
+
+	.include "data/maps/YourHouse/scripts.inc"
+
+	.include "data/maps/NeighborsHouse/scripts.inc"
+
+	.include "data/maps/RadiaLab/scripts.inc"

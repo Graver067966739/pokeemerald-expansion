@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_BLOOM_MOUNTAIN_EAST",
-      "offset": -13,
+      "offset": -3,
       "direction": "left"
     }
   ],

@@ -99,7 +99,8 @@
     "MountainPass",
     "BloomMountainEast",
     "BannerRiver",
-    "DesertPass"
+    "DesertPass",
+    "BloomMountainSouth"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -107,7 +108,10 @@
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab",
-    "Glimmer_Cave"
+    "Glimmer_Cave",
+    "YourHouse",
+    "NeighborsHouse",
+    "RadiaLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

@@ -20,8 +20,13 @@
     },
     {
       "map": "MAP_BANNER_RIVER",
-      "offset": 13,
+      "offset": 3,
       "direction": "right"
+    },
+    {
+      "map": "MAP_BLOOM_MOUNTAIN_SOUTH",
+      "offset": 12,
+      "direction": "left"
     }
   ],
   "object_events": [
