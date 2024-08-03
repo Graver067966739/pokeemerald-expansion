@@ -1,2 +1,15 @@
 RadiaLab_MapScripts::
 	.byte 0
+	Receive_Starter_Script::
+		lockall
+		msgbox Observation_Of_Poke_Case, MSGBOX_DEFAULT
+		callnative StartNewPokeballCaseUI
+		waitstate
+		msgbox Best_Take_Care, MSGBOX_DEFAULT
+		releaseall
+		end
+	Observation_Of_Poke_Case:
+		.string "It's a case full of pokemon$"
+	Best_Take_Care:
+		.string "Better take good care of it$"
+
