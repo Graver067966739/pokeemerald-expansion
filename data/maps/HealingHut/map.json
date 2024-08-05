@@ -1,0 +1,58 @@
+{
+  "id": "MAP_HEALING_HUT",
+  "name": "HealingHut",
+  "layout": "LAYOUT_HEALING_HUT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_RADIA_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_RADIA_VILLAGE",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_RADIA_VILLAGE",
+      "dest_warp_id": "9"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_Flash_Heal"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_Flash_Heal"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

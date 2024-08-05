@@ -82,6 +82,7 @@
 #define MAP_YOUR_HOUSE                           (6 | (1 << 8))
 #define MAP_NEIGHBORS_HOUSE                      (7 | (1 << 8))
 #define MAP_RADIA_LAB                            (8 | (1 << 8))
+#define MAP_HEALING_HUT                          (9 | (1 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))

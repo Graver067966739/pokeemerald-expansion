@@ -1,0 +1,10 @@
+mapscripts HealingHut_MapScripts {}
+
+raw `
+EventScript_Flash_Heal::
+lockall
+fadescreen FADE_TO_WHITE
+special HealPlayerParty
+fadescreen FADE_FROM_WHITE
+release
+end
