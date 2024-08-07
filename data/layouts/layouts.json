@@ -4540,6 +4540,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/HealingHut/border.bin",
       "blockdata_filepath": "data/layouts/HealingHut/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_ISLAND",
+      "name": "MorningIsland_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_Grassy_Terrain",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MorningIsland/border.bin",
+      "blockdata_filepath": "data/layouts/MorningIsland/map.bin"
     }
   ]
 }

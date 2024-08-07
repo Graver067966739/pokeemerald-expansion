@@ -144,7 +144,7 @@
 #define MAPSEC_POKEMON_TOWER                0x8C
 #define MAPSEC_CERULEAN_CAVE                0x8D
 #define MAPSEC_POWER_PLANT                  0x8E
-#define MAPSEC_ONE_ISLAND                   0x8F
+#define MAPSEC_MORNING_ISLAND               0x8F
 #define MAPSEC_TWO_ISLAND                   0x90
 #define MAPSEC_THREE_ISLAND                 0x91
 #define MAPSEC_FOUR_ISLAND                  0x92

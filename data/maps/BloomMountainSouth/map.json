@@ -23,7 +23,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 95,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_BLOOM_MOUNTAIN_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 94,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_BLOOM_MOUNTAIN_SOUTH",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

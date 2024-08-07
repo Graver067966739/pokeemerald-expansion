@@ -1100,3 +1100,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/RadiaLab/scripts.inc"
 
 	.include "data/maps/HealingHut/scripts.inc"
+
+	.include "data/maps/MorningIsland/scripts.inc"
