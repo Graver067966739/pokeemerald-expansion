@@ -633,6 +633,16 @@ EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
 	setvar VAR_ELITE_4_STATE, 0
 	return
 
+Common_EventScript_FlashHeal::
+	lockall
+	flashhealanimon
+	fadescreen FADE_TO_WHITE
+	special HealPlayerParty
+	fadescreen FADE_FROM_WHITE
+	flashhealanimoff
+	release
+	end
+
 Common_EventScript_UpdateBrineyLocation::
 	goto_if_unset FLAG_RECEIVED_POKENAV, Common_EventScript_NopReturn
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Common_EventScript_NopReturn

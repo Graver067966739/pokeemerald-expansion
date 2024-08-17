@@ -683,6 +683,16 @@ static void Task_WarpAndLoadMap(u8 taskId)
     }
 }
 
+static void Put_Follower_In_Ball(struct ObjectEvent *follower)
+{
+    if (follower)
+    {
+        // Put follower into pokeball
+        ClearObjectEventMovement(follower, &gSprites[follower->spriteId]);
+        ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_ENTER_POKEBALL);
+    }
+}
+
 static void Task_DoDoorWarp(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
@@ -696,12 +706,7 @@ static void Task_DoDoorWarp(u8 taskId)
         FreezeObjectEvents();
         PlayerGetDestCoords(x, y);
         PlaySE(GetDoorSoundEffect(*x, *y - 1));
-        if (followerObject)
-        {
-            // Put follower into pokeball
-            ClearObjectEventMovement(followerObject, &gSprites[followerObject->spriteId]);
-            ObjectEventSetHeldMovement(followerObject, MOVEMENT_ACTION_ENTER_POKEBALL);
-        }
+        Put_Follower_In_Ball(followerObject);
         task->data[1] = FieldAnimateDoorOpen(*x, *y - 1);
         task->tState = 1;
         break;

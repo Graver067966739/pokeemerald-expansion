@@ -264,6 +264,18 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
+// gTileset_Laboratory
+#define METATILE_Laboratory_HFLL_Off  0x288
+#define METATILE_Laboratory_HFLL_On   0x28B
+#define METATILE_Laboratory_HFLR_Off  0x28A
+#define METATILE_Laboratory_HFLR_On   0x28C
+#define METATILE_Laboratory_HFM_Off   0x279
+#define METATILE_Laboratory_HFM_On    0x27B
+#define METATILE_Laboratory_HFUL_Off  0x280
+#define METATILE_Laboratory_HFUL_On   0x283
+#define METATILE_Laboratory_HFUR_Off  0x282
+#define METATILE_Laboratory_HFUR_On   0x284
+
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
