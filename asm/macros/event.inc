@@ -2321,3 +2321,8 @@
 	.macro togglefakertc
 	callnative Script_ToggleFakeRtc
 	.endm
+
+	@ Called for flash healing party
+	.macro flashheal
+
+	.endm

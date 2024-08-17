@@ -225,3 +225,9 @@ const u16 gMetatileAttributes_Arid_Town[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_Grassy_Terrain[] = INCBIN_U16("data/tilesets/primary/grassy_terrain/metatiles.bin");
 const u16 gMetatileAttributes_Grassy_Terrain[] = INCBIN_U16("data/tilesets/primary/grassy_terrain/metatile_attributes.bin");
+
+const u16 gMetatiles_BasicBuilding[] = INCBIN_U16("data/tilesets/primary/basic_building/metatiles.bin");
+const u16 gMetatileAttributes_BasicBuilding[] = INCBIN_U16("data/tilesets/primary/basic_building/metatile_attributes.bin");
+
+const u16 gMetatiles_Laboratory[] = INCBIN_U16("data/tilesets/secondary/laboratory/metatiles.bin");
+const u16 gMetatileAttributes_Laboratory[] = INCBIN_U16("data/tilesets/secondary/laboratory/metatile_attributes.bin");
