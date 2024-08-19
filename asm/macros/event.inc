@@ -1917,6 +1917,12 @@
 	.4byte \products
 	.endm
 
+	@! Opens Outfit Box
+	.macro openoutfits taskId:req
+	.byte 0xea
+	.4byte \taskId
+	.endm
+
 	@ Returns Pokemon follower to ball
 	.macro returnmon
 	.byte 0xe5

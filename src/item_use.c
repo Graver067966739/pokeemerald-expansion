@@ -21,7 +21,6 @@
 #include "fldeff.h"
 #include "item.h"
 #include "item_menu.h"
-#include "item_use.h"
 #include "mail.h"
 #include "main.h"
 #include "menu.h"

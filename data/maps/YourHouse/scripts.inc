@@ -24,6 +24,22 @@ GetRunningShoes_2:
 	goto GetRunningShoes_1
 
 
+OpenWardrobe::
+# 23 "data/maps/YourHouse/scripts.pory"
+	lock
+# 24 "data/maps/YourHouse/scripts.pory"
+	msgbox OpenWardrobe_Text_0
+# 25 "data/maps/YourHouse/scripts.pory"
+	FadeScreen FADE_TO_BLACK
+# 26 "data/maps/YourHouse/scripts.pory"
+	callnative Script_OpenOutfitMenu
+# 27 "data/maps/YourHouse/scripts.pory"
+	waitstate
+# 28 "data/maps/YourHouse/scripts.pory"
+	release
+	end
+
+
 GetRunningShoes_Text_0:
 # 8 "data/maps/YourHouse/scripts.pory"
 	.string "You put on your running shoes$"
@@ -31,3 +47,7 @@ GetRunningShoes_Text_0:
 GetRunningShoes_Text_1:
 # 13 "data/maps/YourHouse/scripts.pory"
 	.string "It's full of outfits. \nToo much work to change into them$"
+
+OpenWardrobe_Text_0:
+# 24 "data/maps/YourHouse/scripts.pory"
+	.string "test$"

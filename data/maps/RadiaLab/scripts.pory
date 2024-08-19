@@ -19,4 +19,7 @@ RadiaLab_MapScripts::
 		setvar VAR_TEMP_3, 2
 		call Common_EventScript_FlashHeal
 		
+
     `
+
+	

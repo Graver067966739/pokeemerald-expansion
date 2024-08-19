@@ -20,6 +20,7 @@
 #include "graphics.h"
 #include "international_string_util.h"
 #include "item_icon.h"
+#include "outfit_menu.h"
 #include "link.h"
 #include "load_save.h"
 #include "list_menu.h"
@@ -4255,4 +4256,14 @@ void PreparePartyForSkyBattle(void)
     }
     VarSet(B_VAR_SKY_BATTLE,participatingPokemonSlot);
     CompactPartySlots();
+}
+
+void Script_OpenOutfitMenu(void)
+{
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        CleanupOverworldWindowsAndTilemaps();
+        OpenOutfitMenu(CB2_ReturnToField);
+    }
 }

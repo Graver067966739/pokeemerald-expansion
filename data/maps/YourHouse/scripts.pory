@@ -17,3 +17,14 @@ script GetRunningShoes
     end
 
 }
+
+script OpenWardrobe
+{
+    lock
+    msgbox("test")
+    FadeScreen(FADE_TO_BLACK)
+    callnative(Script_OpenOutfitMenu)
+    waitstate
+    release
+    end
+}
