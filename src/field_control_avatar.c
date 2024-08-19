@@ -73,6 +73,7 @@ static void UpdateFollowerStepCounter(void);
 #if OW_POISON_DAMAGE < GEN_5
 static bool8 UpdatePoisonStepCounter(void);
 #endif // OW_POISON_DAMAGE
+static bool8 EnableAutoRun(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
@@ -84,7 +85,7 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->heldDirection2 = FALSE;
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
-    input->input_field_1_0 = FALSE;
+    input->pressedRButton = FALSE;
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -109,6 +110,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
+            if (newKeys & R_BUTTON)
+                input->pressedRButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -199,6 +202,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         return TRUE;
     }
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+        return TRUE;
+    
+    if (input->pressedRButton && EnableAutoRun())
         return TRUE;
 
 #if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
@@ -1054,3 +1060,26 @@ int SetCableClubWarp(void)
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
 }
+
+extern const u8 EventScript_DisableAutoRun[];
+extern const u8 EventScript_EnableAutoRun[];
+static bool8 EnableAutoRun(void)
+{
+    if (!FlagGet(FLAG_SYS_B_DASH))
+        return FALSE;   //auto run unusable until you get running shoes
+
+    PlaySE(SE_SELECT);
+    if (gSaveBlock2Ptr->autoRun)
+    {
+        gSaveBlock2Ptr->autoRun = FALSE;
+        ScriptContext1_SetupScript(EventScript_DisableAutoRun);
+    }
+    else
+    {
+        gSaveBlock2Ptr->autoRun = TRUE;
+        ScriptContext1_SetupScript(EventScript_EnableAutoRun);
+    }
+    
+    return TRUE;
+}
+
