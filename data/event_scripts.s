@@ -635,6 +635,7 @@ EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
 
 Common_EventScript_FlashHeal::
 	lockall
+	returnmon
 	flashhealanimon
 	fadescreen FADE_TO_WHITE
 	special HealPlayerParty

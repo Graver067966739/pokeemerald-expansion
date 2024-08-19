@@ -1,0 +1,19 @@
+mapscripts YourHouse_MapScripts{}
+
+script GetRunningShoes
+{
+    lock
+    if (!flag (FLAG_SYS_B_DASH))
+    {
+        msgbox("You put on your running shoes")
+        setflag(FLAG_SYS_B_DASH)
+    }
+    else
+    {
+        msgbox("It's full of outfits. \nToo much work to change into them")
+    }
+    waitmessage
+    releaseall
+    end
+
+}
