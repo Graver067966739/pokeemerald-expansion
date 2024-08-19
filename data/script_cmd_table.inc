@@ -230,6 +230,10 @@ gScriptCmdTable::
 	.4byte ScrCmd_dynmultichoice                    @ 0xe3
 	.4byte ScrCmd_dynmultipush                      @ 0xe4
 	.4byte ScrCmd_ballfollowingmon  				@ 0xe5
+	.4byte ScrCmd_toggleoutfit                      @ 0xe6
+	.4byte ScrCmd_getoutfitstatus                   @ 0xe7
+	.4byte ScrCmd_bufferoutfitstr                   @ 0xe8
+	.4byte ScrCmd_pokemartoutfit                    @ 0xe9
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop
