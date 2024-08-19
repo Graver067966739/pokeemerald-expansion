@@ -1387,7 +1387,6 @@ void Task_OpenTrainerCardFromStartMenu(u8 taskId)
         if (FlagGet(FLAG_SYS_FRONTIER_PASS))
             ShowFrontierPass(CB2_ReturnToFullScreenStartMenu);
         else
-
             ShowPlayerTrainerCard(CB2_ReturnToFullScreenStartMenu);
     }
 }
