@@ -108,6 +108,7 @@ Route109_SeashoreHouse_EventScript_BuySodaPop::
 	removemoney 300
 # 55 "data/maps/Route109_SeashoreHouse/scripts.pory"
 	updatemoneybox
+	hidemoneybox
 # 56 "data/maps/Route109_SeashoreHouse/scripts.pory"
 	giveitem ITEM_SODA_POP
 # 57 "data/maps/Route109_SeashoreHouse/scripts.pory"

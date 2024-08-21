@@ -226,6 +226,7 @@ MtChimney_EventScript_LavaCookieLady::
 	checkitemspace ITEM_LAVA_COOKIE
 # 114 "data/maps/MtChimney/scripts.pory"
 	call_if_eq VAR_RESULT, TRUE, MtChimney_EventScript_RemoveMoney
+	hidemoneybox
 # 115 "data/maps/MtChimney/scripts.pory"
 	giveitem ITEM_LAVA_COOKIE
 # 116 "data/maps/MtChimney/scripts.pory"
@@ -243,7 +244,7 @@ MtChimney_EventScript_BagIsFull::
 # 122 "data/maps/MtChimney/scripts.pory"
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
 # 123 "data/maps/MtChimney/scripts.pory"
-	hidemoneybox
+	@hidemoneybox
 # 124 "data/maps/MtChimney/scripts.pory"
 	release
 # 125 "data/maps/MtChimney/scripts.pory"

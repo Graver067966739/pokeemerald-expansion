@@ -2469,6 +2469,18 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
     return TRUE;
 }
 
+bool8 ScrCmd_showitemdesc(struct ScriptContext *ctx)
+{
+    DrawHeaderBox();
+    return FALSE;
+}
+
+bool8 ScrCmd_hideitemdesc(struct ScriptContext *ctx)
+{
+    HideHeaderBox();
+    return FALSE;
+}
+
 bool8 ScrCmd_toggleoutfit(struct ScriptContext *ctx)
 {
     u16 outfitId = VarGet(ScriptReadHalfword(ctx));
