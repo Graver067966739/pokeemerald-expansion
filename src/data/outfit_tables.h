@@ -9,6 +9,10 @@ static const u8 sText_OutfitDesc_UsualGreen[] = _(
 static const u8 sText_OutfitName_UnusualRed[] = _("UNUSUAL RED");
 static const u8 sText_OutfitDesc_UnusualRed[] = _(
     "Rather unusual,\nbut still basic\nOUTFIT.");
+
+static const u8 sText_OutfitName_3[] = _("Tedious Attire");
+static const u8 sText_OutfitDesc_3[] = _(
+    "An outfit that stresses\nyou out just by\nlooking at it.");
 #endif
 
 static const u16 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U16("graphics/pokenav/region_map/brendan_icon.4bpp");
@@ -154,5 +158,21 @@ const struct Outfit gOutfits[OUTFIT_COUNT] =
         .animGfxIds = ANIM_GFX_ID(OUTFIT_RS_BRENDAN, OUTFIT_RS_MAY),
         .iconsRM = REGION_MAP_GFX(RSBrendan, RSMay),
         .iconsFP = sFrontierPassPlayerIcons_RSBrendanMay_Gfx,
+    },
+        [OUTFIT_3] = {
+        .isHidden = FALSE,
+        .prices = { 200, 500 },
+        #if MODERN == 1
+        .name = COMPOUND_STRING("Fancy Attire"),
+        .desc = COMPOUND_STRING("A nice,\noutfit."),
+        #else
+        .name = sText_OutfitName_3,
+        .desc = sText_OutfitDesc_3,
+        #endif
+        .trainerPics = TRAINER_ID(BRENDAN, MAY),
+        .avatarGfxIds = AVATAR_GFX_ID(BRENDAN3, MAY3),
+        .animGfxIds = ANIM_GFX_ID(BRENDAN3, MAY3),
+        .iconsRM = REGION_MAP_GFX(Brendan, May),
+        .iconsFP = sFrontierPassPlayerIcons_BrendanMay_Gfx,
     },
 };

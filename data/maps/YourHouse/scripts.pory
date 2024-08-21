@@ -18,6 +18,16 @@ script GetRunningShoes
 
 }
 
+script UnlockOutfit3
+{
+    lock
+    msgbox("unlock")
+    waitmessage
+    callnative(Script_UnlockOutfit3)
+    releaseall
+    end
+}
+
 script OpenWardrobe
 {
     lock

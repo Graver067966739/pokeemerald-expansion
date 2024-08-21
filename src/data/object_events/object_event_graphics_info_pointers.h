@@ -2,6 +2,27 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNorm
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanFieldMove;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3Normal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3MachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3AcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3Surfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3Underwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3Fishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3Watering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3FieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan3Decorating;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3Normal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3MachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3AcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3Surfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3Underwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3Fishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3Watering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3FieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May3Decorating;
+
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_QuintyPlump;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
@@ -254,6 +275,27 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
     [OBJ_EVENT_GFX_BRENDAN_SURFING] =          &gObjectEventGraphicsInfo_BrendanSurfing,
     [OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE] =       &gObjectEventGraphicsInfo_BrendanFieldMove,
+
+    [OBJ_EVENT_GFX_BRENDAN3_NORMAL] =           &gObjectEventGraphicsInfo_Brendan3Normal,
+    [OBJ_EVENT_GFX_BRENDAN3_MACH_BIKE] =        &gObjectEventGraphicsInfo_Brendan3MachBike,
+    [OBJ_EVENT_GFX_BRENDAN3_ACRO_BIKE] =        &gObjectEventGraphicsInfo_Brendan3AcroBike,
+    [OBJ_EVENT_GFX_BRENDAN3_SURFING] =          &gObjectEventGraphicsInfo_Brendan3Surfing,
+    [OBJ_EVENT_GFX_BRENDAN3_UNDERWATER] =       &gObjectEventGraphicsInfo_Brendan3Underwater,
+    [OBJ_EVENT_GFX_BRENDAN3_FISHING] =          &gObjectEventGraphicsInfo_Brendan3Fishing,
+    [OBJ_EVENT_GFX_BRENDAN3_WATERING] =         &gObjectEventGraphicsInfo_Brendan3Watering,
+    [OBJ_EVENT_GFX_BRENDAN3_FIELD_MOVE] =       &gObjectEventGraphicsInfo_Brendan3FieldMove,
+    [OBJ_EVENT_GFX_BRENDAN3_DECORATING] =       &gObjectEventGraphicsInfo_Brendan3Decorating,
+
+    [OBJ_EVENT_GFX_MAY3_NORMAL] =               &gObjectEventGraphicsInfo_May3Normal,
+    [OBJ_EVENT_GFX_MAY3_MACH_BIKE] =            &gObjectEventGraphicsInfo_May3MachBike,
+    [OBJ_EVENT_GFX_MAY3_ACRO_BIKE] =            &gObjectEventGraphicsInfo_May3AcroBike,
+    [OBJ_EVENT_GFX_MAY3_SURFING] =              &gObjectEventGraphicsInfo_May3Surfing,
+    [OBJ_EVENT_GFX_MAY3_UNDERWATER] =           &gObjectEventGraphicsInfo_May3Underwater,
+    [OBJ_EVENT_GFX_MAY3_FISHING] =              &gObjectEventGraphicsInfo_May3Fishing,
+    [OBJ_EVENT_GFX_MAY3_WATERING] =             &gObjectEventGraphicsInfo_May3Watering,
+    [OBJ_EVENT_GFX_MAY3_FIELD_MOVE] =           &gObjectEventGraphicsInfo_May3FieldMove,
+    [OBJ_EVENT_GFX_MAY3_DECORATING] =           &gObjectEventGraphicsInfo_May3Decorating,
+
     [OBJ_EVENT_GFX_QUINTY_PLUMP] =             &gObjectEventGraphicsInfo_QuintyPlump,
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,

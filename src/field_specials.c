@@ -4277,3 +4277,8 @@ void Script_OpenOutfitMenu(void)
         OpenOutfitMenu(CB2_ReturnToField);
     }
 }
+
+void Script_UnlockOutfit(void)
+{
+    UnlockOutfit(OUTFIT_3);
+}

@@ -24,18 +24,32 @@ GetRunningShoes_2:
 	goto GetRunningShoes_1
 
 
-OpenWardrobe::
+UnlockOutfit3::
 # 23 "data/maps/YourHouse/scripts.pory"
 	lock
 # 24 "data/maps/YourHouse/scripts.pory"
-	msgbox OpenWardrobe_Text_0
+	msgbox UnlockOutfit3_Text_0
 # 25 "data/maps/YourHouse/scripts.pory"
-	FadeScreen FADE_TO_BLACK
+	waitmessage
 # 26 "data/maps/YourHouse/scripts.pory"
-	callnative Script_OpenOutfitMenu
+	callnative Script_UnlockOutfit
 # 27 "data/maps/YourHouse/scripts.pory"
+	releaseall
+	end
+
+
+OpenWardrobe::
+# 33 "data/maps/YourHouse/scripts.pory"
+	lock
+# 34 "data/maps/YourHouse/scripts.pory"
+	msgbox OpenWardrobe_Text_0
+# 35 "data/maps/YourHouse/scripts.pory"
+	FadeScreen FADE_TO_BLACK
+# 36 "data/maps/YourHouse/scripts.pory"
+	callnative Script_OpenOutfitMenu
+# 37 "data/maps/YourHouse/scripts.pory"
 	waitstate
-# 28 "data/maps/YourHouse/scripts.pory"
+# 38 "data/maps/YourHouse/scripts.pory"
 	release
 	end
 
@@ -48,6 +62,10 @@ GetRunningShoes_Text_1:
 # 13 "data/maps/YourHouse/scripts.pory"
 	.string "It's full of outfits. \nToo much work to change into them$"
 
-OpenWardrobe_Text_0:
+UnlockOutfit3_Text_0:
 # 24 "data/maps/YourHouse/scripts.pory"
+	.string "unlock$"
+
+OpenWardrobe_Text_0:
+# 34 "data/maps/YourHouse/scripts.pory"
 	.string "test$"
