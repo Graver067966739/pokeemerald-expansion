@@ -4278,7 +4278,7 @@ void Script_OpenOutfitMenu(void)
     }
 }
 
-void Script_UnlockOutfit(void)
+void Script_UnlockOutfit3(void)
 {
     UnlockOutfit(OUTFIT_3);
 }

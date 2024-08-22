@@ -34,6 +34,6 @@ bool8 ShouldShowBoxWasFullMessage(void);
 void SetPCBoxToSendMon(u8 boxId);
 void PreparePartyForSkyBattle(void);
 void Script_OpenOutfitMenu(void);
-void Script_UnlockOutfit(void);
+void Script_UnlockOutfit3(void);
 
 #endif // GUARD_FIELD_SPECIALS_H
