@@ -27,6 +27,7 @@
 #include "constants/abilities.h"
 #include "constants/items.h"
 #include "constants/battle_frontier.h"
+#include "pokevial.h" //Pokevial Branch
 #include "constants/abilities.h"
 #include "wild_encounter.h"
 
@@ -37,6 +38,7 @@ static void HealPlayerBoxes(void);
 void HealPlayerParty(void)
 {
     u32 i;
+    PokevialRefill(); //Pokevial Branch
     for (i = 0; i < gPlayerPartyCount; i++)
         HealPokemon(&gPlayerParty[i]);
     if (OW_PC_HEAL >= GEN_8)

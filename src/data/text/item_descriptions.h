@@ -3998,3 +3998,10 @@ static const u8 sOutfitBoxDesc[] = _(
     "A box for storing\n"
     "your collections of\n"
     "Outfits safely.");
+
+//Start Pokevial Branch
+static const u8 sPokevialDesc[] = _(
+    "Restores all\n"
+    "POKéMON to full\n"
+    "health.");
+//End Pokevial Branch

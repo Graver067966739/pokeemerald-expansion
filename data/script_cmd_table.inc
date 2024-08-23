@@ -234,6 +234,7 @@ gScriptCmdTable::
 	.4byte ScrCmd_getoutfitstatus                   @ 0xe7
 	.4byte ScrCmd_bufferoutfitstr                   @ 0xe8
 	.4byte ScrCmd_pokemartoutfit                    @ 0xe9
+    .4byte ScrCmd_pokevial                          @ 0xea //Pokevial Branch
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

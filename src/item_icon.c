@@ -7,6 +7,7 @@
 #include "constants/items.h"
 #include "item.h"
 #include "battle_main.h"
+#include "pokevial.h" // Pokevial Branch
 
 // EWRAM vars
 EWRAM_DATA u8 *gItemIconDecompressionBuffer = NULL;
@@ -183,6 +184,11 @@ const void *GetItemIconPalette(u16 itemId)
         return gItemsInfo[0].iconPalette;
     if (itemId >= ITEM_TM01 && itemId < ITEM_HM01 + NUM_HIDDEN_MACHINES)
         return gTypesInfo[gMovesInfo[gItemsInfo[itemId].secondaryId].type].paletteTMHM;
+
+    // Start Pokevial Branch
+    if (itemId == ITEM_POKEVIAL)
+        return PokevialGetDoseIcon();
+    // End Pokevial Branch
 
     return gItemsInfo[itemId].iconPalette;
 }
