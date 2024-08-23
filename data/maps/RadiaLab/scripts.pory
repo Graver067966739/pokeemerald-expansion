@@ -1,25 +1,37 @@
-raw `
-RadiaLab_MapScripts::
-	.byte 0
-	Receive_Starter_Script::
-		lockall
-		msgbox Observation_Of_Poke_Case, MSGBOX_DEFAULT
-		callnative StartNewPokeballCaseUI
-		waitstate
-		msgbox Best_Take_Care, MSGBOX_DEFAULT
-		releaseall
-		end
-	Observation_Of_Poke_Case:
-		.string "It's a case full of pokemon$"
-	Best_Take_Care:
-		.string "Better take good care of it$"
+mapscripts RadiaLab_MapScripts{}
 
-	Radia_Lab_FH::
-		setvar VAR_TEMP_2, 8 
-		setvar VAR_TEMP_3, 2
-		call Common_EventScript_FlashHeal
-		
+script Receive_Starter_Script
+{
+	lockall
+	msgbox ("It's a case full of pokemon$")
+	callnative (StartNewPokeballCaseUI)
+	waitstate
+	msgbox ("Better take good care of it$")
+	releaseall
+	end
+}
 
-    `
+script Radia_Lab_FH
+{
+	setvar (VAR_TEMP_2, 8)
+	setvar (VAR_TEMP_3, 2)
+	call (Common_EventScript_FlashHeal)
+}
 
-	
+script Radia_Lab_Proffesor
+{
+	lockall 
+	faceplayer
+	msgbox ("Here, have a pokedex")
+	playfanfare (MUS_OBTAIN_ITEM)
+	msgbox ("{PLAYER} received the POKéDEX!$")
+	waitfanfare
+	setflag (FLAG_SYS_POKEDEX_GET)
+	setflag (FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+	special (SetUnlockedPokedexFlags)
+	setflag (FLAG_SYS_NATIONAL_DEX)
+	special (EnableNationalPokedex)
+	face_down
+	releaseall
+	end
+}

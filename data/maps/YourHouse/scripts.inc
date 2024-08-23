@@ -32,7 +32,7 @@ UnlockOutfit3::
 # 25 "data/maps/YourHouse/scripts.pory"
 	waitmessage
 # 26 "data/maps/YourHouse/scripts.pory"
-	callnative Script_UnlockOutfit
+	callnative Script_UnlockOutfit3
 # 27 "data/maps/YourHouse/scripts.pory"
 	releaseall
 	end
