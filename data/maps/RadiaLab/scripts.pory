@@ -20,18 +20,37 @@ script Radia_Lab_FH
 
 script Radia_Lab_Proffesor
 {
-	lockall 
-	faceplayer
-	msgbox ("Here, have a pokedex")
-	playfanfare (MUS_OBTAIN_ITEM)
-	msgbox ("{PLAYER} received the POKéDEX!$")
-	waitfanfare
-	setflag (FLAG_SYS_POKEDEX_GET)
-	setflag (FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-	special (SetUnlockedPokedexFlags)
-	setflag (FLAG_SYS_NATIONAL_DEX)
-	special (EnableNationalPokedex)
-	face_down
-	releaseall
-	end
+	if (!flag(FLAG_SYS_POKEDEX_GET))
+	{
+		lockall 
+		faceplayer
+		msgbox ("Here, have a pokedex")
+		playfanfare (MUS_OBTAIN_ITEM)
+		msgbox ("{PLAYER} received the POKéDEX!$")
+		waitfanfare
+		setflag (FLAG_SYS_POKEDEX_GET)
+		setflag (FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+		special (SetUnlockedPokedexFlags)
+		setflag (FLAG_SYS_NATIONAL_DEX)
+		special (EnableNationalPokedex)
+		applymovement (VAR_LAST_TALKED, LookBack) 
+		waitmovement(0)
+		releaseall
+		end
+	}
+	else
+	{
+		lockall 
+		faceplayer
+		msgbox ("I already gave you a pokedex \nnow please leave \nI am busy.$")
+		applymovement (VAR_LAST_TALKED, LookBack)
+		releaseall
+		end
+	}
+
+}
+
+movement LookBack
+{
+  face_original_direction
 }

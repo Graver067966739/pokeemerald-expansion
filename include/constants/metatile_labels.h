@@ -1,6 +1,12 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_BasicBuilding
+#define METATILE_BasicBuilding_PC_Off  0x010
+#define METATILE_BasicBuilding_PC_On   0x00F
+#define METATILE_BasicBuilding_TV_Off  0x090
+#define METATILE_BasicBuilding_TV_On   0x080
+
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 

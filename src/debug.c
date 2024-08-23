@@ -116,9 +116,14 @@ enum GivePCBagFillDebugMenu
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW,
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGASTONES,
+    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ZCRYSTALS,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS,
 };
 
@@ -382,8 +387,13 @@ static void DebugAction_PCBag_Fill_PCBoxes_Fast(u8 taskId);
 static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId);
 static void DebugAction_PCBag_Fill_PCItemStorage(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketItems(u8 taskId);
+static void DebugAction_PCBag_Fill_PocketMedicine(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId);
+static void DebugAction_PCBag_Fill_BattleItems(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketTMHM(u8 taskId);
+static void DebugAction_PCBag_Fill_MegaStones(u8 taskId);
+static void DebugAction_PCBag_Fill_ZCrystals(u8 taskId);
+static void DebugAction_PCBag_Fill_Treasures(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketBerries(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketKeyItems(u8 taskId);
 static void DebugAction_PCBag_AccessPC(u8 taskId);
@@ -542,9 +552,14 @@ static const u8 sDebugText_PCBag_Fill_Pc_Fast[] =            _("Fill PC Boxes Fa
 static const u8 sDebugText_PCBag_Fill_Pc_Slow[] =            _("Fill PC Boxes Slow (LAG!)");
 static const u8 sDebugText_PCBag_Fill_Pc_Items[] =           _("Fill PC Items");
 static const u8 sDebugText_PCBag_Fill_PocketItems[] =        _("Fill Pocket Items");
+static const u8 sDebugText_PCBag_Fill_PocketMedicine[] =      ("Fill Pocket Medicine");
 static const u8 sDebugText_PCBag_Fill_PocketPokeBalls[] =    _("Fill Pocket Poké Balls");
+static const u8 sDebugText_PCBag_Fill_PocketBattleItems[] =   ("Fill Pocket Battle Items");
 static const u8 sDebugText_PCBag_Fill_PocketTMHM[] =         _("Fill Pocket TMHM");
 static const u8 sDebugText_PCBag_Fill_PocketBerries[] =      _("Fill Pocket Berries");
+static const u8 sDebugText_PCBag_Fill_PocketTreasures[] =     ("Fill Pocket Treasures");
+static const u8 sDebugText_PCBag_Fill_PocketMegaStones[] =    ("Fill Pocket Mega Stones");
+static const u8 sDebugText_PCBag_Fill_PocketZCrystals[] =     ("Fill Pocket Z-Crystals");
 static const u8 sDebugText_PCBag_Fill_PocketKeyItems[] =     _("Fill Pocket Key Items");
 static const u8 sDebugText_PCBag_AccessPC[] =                _("Access PC");
 static const u8 sDebugText_PCBag_ClearBag[] =                _("Clear Bag");
@@ -737,14 +752,19 @@ static const struct ListMenuItem sDebugMenu_Items_PCBag[] =
 
 static const struct ListMenuItem sDebugMenu_Items_PCBag_Fill[] =
 {
-    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]    = {sDebugText_PCBag_Fill_Pc_Fast,         DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]    = {sDebugText_PCBag_Fill_Pc_Slow,         DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]         = {sDebugText_PCBag_Fill_Pc_Items ,       DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS]     = {sDebugText_PCBag_Fill_PocketItems,     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS]     = {sDebugText_PCBag_Fill_PocketPokeBalls, DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM]      = {sDebugText_PCBag_Fill_PocketTMHM,      DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES]   = {sDebugText_PCBag_Fill_PocketBerries,   DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES},
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS] = {sDebugText_PCBag_Fill_PocketKeyItems,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]       = {sDebugText_PCBag_Fill_Pc_Fast,          DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]       = {sDebugText_PCBag_Fill_Pc_Slow,          DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]            = {sDebugText_PCBag_Fill_Pc_Items ,        DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS]        = {sDebugText_PCBag_Fill_PocketItems,      DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE]     = {sDebugText_PCBag_Fill_PocketMedicine,   DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS]        = {sDebugText_PCBag_Fill_PocketPokeBalls,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS] = {sDebugText_PCBag_Fill_PocketBattleItems,DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES]    = {sDebugText_PCBag_Fill_PocketTreasures,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGASTONES]   = {sDebugText_PCBag_Fill_PocketMegaStones, DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGASTONES},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ZCRYSTALS]    = {sDebugText_PCBag_Fill_PocketZCrystals,  DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ZCRYSTALS},        
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM]         = {sDebugText_PCBag_Fill_PocketTMHM,       DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES]      = {sDebugText_PCBag_Fill_PocketBerries,    DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS]    = {sDebugText_PCBag_Fill_PocketKeyItems,   DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS},
 };
 
 static const struct ListMenuItem sDebugMenu_Items_Party[] =
@@ -907,14 +927,19 @@ static void (*const sDebugMenu_Actions_PCBag[])(u8) =
 
 static void (*const sDebugMenu_Actions_PCBag_Fill[])(u8) =
 {
-    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]    = DebugAction_PCBag_Fill_PCBoxes_Fast,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]    = DebugAction_PCBag_Fill_PCBoxes_Slow,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]         = DebugAction_PCBag_Fill_PCItemStorage,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS]     = DebugAction_PCBag_Fill_PocketItems,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS]     = DebugAction_PCBag_Fill_PocketPokeBalls,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM]      = DebugAction_PCBag_Fill_PocketTMHM,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES]   = DebugAction_PCBag_Fill_PocketBerries,
-    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS] = DebugAction_PCBag_Fill_PocketKeyItems,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]       = DebugAction_PCBag_Fill_PCBoxes_Fast,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]       = DebugAction_PCBag_Fill_PCBoxes_Slow,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]            = DebugAction_PCBag_Fill_PCItemStorage,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS]        = DebugAction_PCBag_Fill_PocketItems,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEDICINE]     = DebugAction_PCBag_Fill_PocketMedicine,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS]        = DebugAction_PCBag_Fill_PocketPokeBalls,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BATTLE_ITEMS] = DebugAction_PCBag_Fill_BattleItems,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TMHM]         = DebugAction_PCBag_Fill_PocketTMHM,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_TREASURES]    = DebugAction_PCBag_Fill_Treasures,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_MEGASTONES]   = DebugAction_PCBag_Fill_MegaStones,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ZCRYSTALS]    = DebugAction_PCBag_Fill_ZCrystals,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BERRIES]      = DebugAction_PCBag_Fill_PocketBerries,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_KEY_ITEMS]    = DebugAction_PCBag_Fill_PocketKeyItems,
 };
 
 static void (*const sDebugMenu_Actions_Party[])(u8) =
@@ -4173,12 +4198,38 @@ static void DebugAction_PCBag_Fill_PocketItems(u8 taskId)
     }
 }
 
+static void DebugAction_PCBag_Fill_PocketMedicine(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = FIRST_MEDICINE; itemId < LAST_MEDICINE; itemId++)
+    {
+        if (CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
 static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId)
 {
     u16 itemId;
 
     for (itemId = FIRST_BALL; itemId < LAST_BALL; itemId++)
     {
+        if (CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+
+static void DebugAction_PCBag_Fill_BattleItems(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = FIRST_BATTLE_ITEM; itemId < LAST_BATTLE_ITEM; itemId++)
+    {
+        if (itemId == JUMP_BATTLE_ITEMS)
+        {
+            itemId = RESUME_BATTLE_ITEMS;
+        }
         if (CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
             AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
     }
@@ -4214,6 +4265,37 @@ static void DebugAction_PCBag_Fill_PocketKeyItems(u8 taskId)
     {
         if (ItemId_GetPocket(itemId) == POCKET_KEY_ITEMS && CheckBagHasSpace(itemId, 1))
             AddBagItem(itemId, 1);
+    }
+}
+
+static void DebugAction_PCBag_Fill_MegaStones(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = FIRST_MEGA_STONE; itemId < LAST_MEGA_STONE; itemId++)
+    {
+        if (CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+static void DebugAction_PCBag_Fill_ZCrystals(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = FIRST_Z_Crystal; itemId < LAST_Z_Crystal; itemId++)
+    {
+        if (CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
+    }
+}
+static void DebugAction_PCBag_Fill_Treasures(u8 taskId)
+{
+    u16 itemId;
+
+    for (itemId = FIRST_TREASURE; itemId < LAST_TREASURE; itemId++)
+    {
+        if (CheckBagHasSpace(itemId, MAX_BAG_ITEM_CAPACITY))
+            AddBagItem(itemId, MAX_BAG_ITEM_CAPACITY);
     }
 }
 

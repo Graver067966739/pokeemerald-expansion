@@ -84,6 +84,9 @@
 #define ITEM_SHALOUR_SABLE 63
 #define ITEM_BIG_MALASADA 64
 
+#define FIRST_MEDICINE ITEM_POTION
+#define LAST_MEDICINE  ITEM_BIG_MALASADA
+
 // Vitamins
 #define ITEM_HP_UP 65
 #define ITEM_PROTEIN 66
@@ -183,6 +186,8 @@
 
 #define ITEM_MAX_MUSHROOMS 132
 
+#define JUMP_BATTLE_ITEMS   ITEM_BOTTLE_CAP //This is added so when I iterate through battle items, I can skip to the next segment
+
 // Treasures
 #define ITEM_BOTTLE_CAP 133
 #define ITEM_GOLD_BOTTLE_CAP 134
@@ -236,6 +241,9 @@
 #define ITEM_FOSSILIZED_FISH 177
 #define ITEM_FOSSILIZED_DRAKE 178
 #define ITEM_FOSSILIZED_DINO 179
+
+#define FIRST_TREASURE  ITEM_BOTTLE_CAP
+#define LAST_TREASURE   ITEM_FOSSILIZED_DINO
 
 // Mulch
 #define ITEM_GROWTH_MULCH 180
@@ -429,6 +437,9 @@
 #define ITEM_AUDINITE 337
 #define ITEM_DIANCITE 338
 
+#define FIRST_MEGA_STONE    ITEM_VENUSAURITE
+#define LAST_MEGA_STONE     ITEM_DIANCITE
+
 // Gems
 #define ITEM_NORMAL_GEM 339
 #define ITEM_FIRE_GEM 340
@@ -486,6 +497,9 @@
 #define ITEM_PIKASHUNIUM_Z 390
 #define ITEM_ULTRANECROZIUM_Z 391
 
+#define FIRST_Z_Crystal ITEM_NORMALIUM_Z
+#define LAST_Z_Crystal  ITEM_ULTRANECROZIUM_Z
+
 // Species-specific Held Items
 #define ITEM_LIGHT_BALL 392
 #define ITEM_LEEK 393
@@ -521,6 +535,7 @@
 #define ITEM_GREEN_SCARF 416
 #define ITEM_YELLOW_SCARF 417
 
+#define RESUME_BATTLE_ITEMS     ITEM_MACHO_BRACE //The counterpart to JUMP_BATTLE_ITEMS
 // EV Gain Modifiers
 #define ITEM_MACHO_BRACE 418
 #define ITEM_POWER_WEIGHT 419
@@ -553,6 +568,9 @@
 #define ITEM_BLACK_GLASSES 440
 #define ITEM_BLACKGLASSES ITEM_BLACK_GLASSES // Pre-Gen VI name
 #define ITEM_METAL_COAT 441
+
+#define FIRST_BATTLE_ITEM   ITEM_X_ATTACK
+#define LAST_BATTLE_ITEM    ITEM_METAL_COAT
 
 // Choice Items
 #define ITEM_CHOICE_BAND 442
