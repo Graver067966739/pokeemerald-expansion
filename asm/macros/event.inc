@@ -2415,15 +2415,3 @@
 	.macro togglefakertc
 	callnative Script_ToggleFakeRtc
 	.endm
-
-	@ Called for animating flash heal machine on
-	.macro flashhealanimon
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFM_On, FALSE
-	special DrawWholeMapView
-	.endm
-
-	@ Called for animating flash heal machine off
-	.macro flashhealanimoff
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFM_Off, FALSE
-	special DrawWholeMapView
-	.endm

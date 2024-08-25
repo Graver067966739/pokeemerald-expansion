@@ -668,11 +668,50 @@ EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
 Common_EventScript_FlashHeal::
 	lockall
 	returnmon
-	flashhealanimon
+	getplayerxy VAR_TEMP_2, VAR_TEMP_3
+
+	subvar VAR_TEMP_2, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLL_On, FALSE
+
+	subvar VAR_TEMP_3, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUL_On, FALSE
+
+	subvar VAR_TEMP_3, 1
+	addvar VAR_TEMP_2, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFM_On, FALSE
+	
+	addvar VAR_TEMP_2, 1
+	addvar VAR_TEMP_3, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUR_On, FALSE
+	
+	addvar VAR_TEMP_3, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLR_On, FALSE
+
+	special DrawWholeMapView
+
 	fadescreen FADE_TO_WHITE
 	special HealPlayerParty
 	fadescreen FADE_FROM_WHITE
-	flashhealanimoff
+
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLR_Off, FALSE
+
+	subvar VAR_TEMP_3, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUR_Off, FALSE
+
+	subvar VAR_TEMP_3, 1
+	subvar VAR_TEMP_2, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFM_Off, FALSE
+
+	subvar VAR_TEMP_2, 1
+	addvar VAR_TEMP_3, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUL_Off, FALSE
+
+	addvar VAR_TEMP_3, 1
+	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLL_Off, FALSE
+	
+
+	special DrawWholeMapView
+	
 	release
 	end
 

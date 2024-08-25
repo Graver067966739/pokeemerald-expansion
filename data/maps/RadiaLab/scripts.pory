@@ -13,8 +13,6 @@ script Receive_Starter_Script
 
 script Radia_Lab_FH
 {
-	setvar (VAR_TEMP_2, 8)
-	setvar (VAR_TEMP_3, 2)
 	call (Common_EventScript_FlashHeal)
 }
 
@@ -42,7 +40,7 @@ script Radia_Lab_Proffesor
 	{
 		lockall 
 		faceplayer
-		msgbox ("I already gave you a pokedex \nnow please leave \nI am busy.$")
+		msgbox ("I already gave you a pokedex\nnow please leave\nI am busy.")
 		applymovement (VAR_LAST_TALKED, LookBack)
 		releaseall
 		end

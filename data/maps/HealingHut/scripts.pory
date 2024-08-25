@@ -1,5 +1,1 @@
 mapscripts HealingHut_MapScripts {}
-
-raw `
-EventScript_Flash_Heal::
-call Common_EventScript_FlashHeal

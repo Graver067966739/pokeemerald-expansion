@@ -7,6 +7,8 @@ script GetRunningShoes
     {
         msgbox("You put on your running shoes")
         setflag(FLAG_SYS_B_DASH)
+        setmetatile (5, 7, METATILE_BasicBuilding_Shoes_Taken, FALSE)
+        special (DrawWholeMapView)
     }
     else
     {

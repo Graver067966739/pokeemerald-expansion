@@ -2,10 +2,12 @@
 #define GUARD_METATILE_LABELS_H
 
 // gTileset_BasicBuilding
-#define METATILE_BasicBuilding_PC_Off  0x010
-#define METATILE_BasicBuilding_PC_On   0x00F
-#define METATILE_BasicBuilding_TV_Off  0x090
-#define METATILE_BasicBuilding_TV_On   0x080
+#define METATILE_BasicBuilding_PC_Off       0x010
+#define METATILE_BasicBuilding_PC_On        0x00F
+#define METATILE_BasicBuilding_Shoes_Here   0x076
+#define METATILE_BasicBuilding_Shoes_Taken  0x075
+#define METATILE_BasicBuilding_TV_Off       0x090
+#define METATILE_BasicBuilding_TV_On        0x080
 
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
@@ -271,6 +273,8 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
 // gTileset_Laboratory
+#define METATILE_Laboratory_GB_Gone   0x287
+#define METATILE_Laboratory_GB_Here   0x277
 #define METATILE_Laboratory_HFLL_Off  0x288
 #define METATILE_Laboratory_HFLL_On   0x28B
 #define METATILE_Laboratory_HFLR_Off  0x28A
