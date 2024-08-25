@@ -670,22 +670,25 @@ Common_EventScript_FlashHeal::
 	returnmon
 	getplayerxy VAR_TEMP_2, VAR_TEMP_3
 
-	subvar VAR_TEMP_2, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLL_On, FALSE
+	.set X, VAR_TEMP_2
+	.set Y, VAR_TEMP_3
 
-	subvar VAR_TEMP_3, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUL_On, FALSE
+	subvar X, 1
+	setmetatile X, Y, METATILE_Laboratory_HFLL_On, FALSE
 
-	subvar VAR_TEMP_3, 1
-	addvar VAR_TEMP_2, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFM_On, FALSE
+	subvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFUL_On, FALSE
+
+	subvar Y, 1
+	addvar X, 1
+	setmetatile X, Y, METATILE_Laboratory_HFM_On, FALSE
 	
-	addvar VAR_TEMP_2, 1
-	addvar VAR_TEMP_3, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUR_On, FALSE
+	addvar X, 1
+	addvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFUR_On, FALSE
 	
-	addvar VAR_TEMP_3, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLR_On, FALSE
+	addvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFLR_On, FALSE
 
 	special DrawWholeMapView
 
@@ -693,25 +696,24 @@ Common_EventScript_FlashHeal::
 	special HealPlayerParty
 	fadescreen FADE_FROM_WHITE
 
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLR_Off, FALSE
+	setmetatile X, Y, METATILE_Laboratory_HFLR_Off, FALSE
 
-	subvar VAR_TEMP_3, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUR_Off, FALSE
+	subvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFUR_Off, FALSE
 
-	subvar VAR_TEMP_3, 1
-	subvar VAR_TEMP_2, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFM_Off, FALSE
+	subvar X, 1
+	subvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFM_Off, FALSE
 
-	subvar VAR_TEMP_2, 1
-	addvar VAR_TEMP_3, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFUL_Off, FALSE
+	subvar X, 1
+	addvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFUL_Off, FALSE
 
-	addvar VAR_TEMP_3, 1
-	setmetatile VAR_TEMP_2, VAR_TEMP_3, METATILE_Laboratory_HFLL_Off, FALSE
-	
+	addvar Y, 1
+	setmetatile X, Y, METATILE_Laboratory_HFLL_Off, FALSE
 
 	special DrawWholeMapView
-	
+
 	release
 	end
 

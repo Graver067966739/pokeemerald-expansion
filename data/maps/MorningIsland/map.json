@@ -79,14 +79,14 @@
     },
     {
       "x": 16,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_MORNING_FOREST",
       "dest_warp_id": "1"
     },
     {
       "x": 17,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_MORNING_FOREST",
       "dest_warp_id": "0"
