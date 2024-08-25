@@ -62,4 +62,4 @@ GetRunningShoes_Text_1:
 
 Sibling_Text_0:
 # 24 "data/maps/YourHouse/scripts.pory"
-	.string "now where was it....$"
+	.string "Now where was it{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.$"

@@ -643,11 +643,8 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         }
         else
         {
-            PlayerRun(direction);         
-        }
-
-            
-        gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
+            PlayerRun(direction);                   
+            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         }
         return;
     }

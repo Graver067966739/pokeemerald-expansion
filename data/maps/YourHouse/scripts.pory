@@ -21,7 +21,7 @@ script GetRunningShoes
 script Sibling
 {
     lockall
-    msgbox("Now where was it....")
+    msgbox("Now where was it{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.")
     //Common_Movement_ExclamationMark
     waitmessage
     releaseall
