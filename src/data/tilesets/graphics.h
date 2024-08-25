@@ -1786,3 +1786,41 @@ const u16 gTilesetPalettes_Laboratory[][16] =
 };
 
 const u32 gTilesetTiles_Laboratory[] = INCBIN_U32("data/tilesets/secondary/laboratory/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Morning_Island[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_island/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Morning_Island[] = INCBIN_U32("data/tilesets/secondary/morning_island/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Morning_Interior[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/morning_interior/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Morning_Interior[] = INCBIN_U32("data/tilesets/secondary/morning_interior/tiles.4bpp.lz");

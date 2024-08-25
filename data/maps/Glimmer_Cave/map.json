@@ -3,7 +3,7 @@
   "name": "Glimmer_Cave",
   "layout": "LAYOUT_GLIMMER_CAVE",
   "music": "MUS_RG_SEVII_CAVE",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_RADIA_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

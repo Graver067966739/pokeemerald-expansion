@@ -138,6 +138,12 @@
 #define MAP_PACIFIDLOG_TOWN_HOUSE3            (4 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE4            (5 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE5            (6 | (7 << 8))
+#define MAP_FUNERAL_BUILDING                  (7 | (7 << 8))
+#define MAP_FUNERAL_BUILDING_BACK_ROOM        (8 | (7 << 8))
+#define MAP_MORNING_SHOP                      (9 | (7 << 8))
+#define MAP_MORNING_HOUSE1                    (10 | (7 << 8))
+#define MAP_MORNING_MANOR                     (11 | (7 << 8))
+#define MAP_MORNING_MANOR_UPPER               (12 | (7 << 8))
 
 // gMapGroup_IndoorPetalburg
 #define MAP_PETALBURG_CITY_WALLYS_HOUSE      (0 | (8 << 8))
@@ -414,6 +420,8 @@
 #define MAP_TERRA_CAVE_END                           (105 | (24 << 8))
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
+#define MAP_MORNING_FOREST                           (108 | (24 << 8))
+#define MAP_MORNING_CAVE                             (109 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

@@ -231,3 +231,9 @@ const u16 gMetatileAttributes_BasicBuilding[] = INCBIN_U16("data/tilesets/primar
 
 const u16 gMetatiles_Laboratory[] = INCBIN_U16("data/tilesets/secondary/laboratory/metatiles.bin");
 const u16 gMetatileAttributes_Laboratory[] = INCBIN_U16("data/tilesets/secondary/laboratory/metatile_attributes.bin");
+
+const u16 gMetatiles_Morning_Island[] = INCBIN_U16("data/tilesets/secondary/morning_island/metatiles.bin");
+const u16 gMetatileAttributes_Morning_Island[] = INCBIN_U16("data/tilesets/secondary/morning_island/metatile_attributes.bin");
+
+const u16 gMetatiles_Morning_Interior[] = INCBIN_U16("data/tilesets/secondary/morning_interior/metatiles.bin");
+const u16 gMetatileAttributes_Morning_Interior[] = INCBIN_U16("data/tilesets/secondary/morning_interior/metatile_attributes.bin");

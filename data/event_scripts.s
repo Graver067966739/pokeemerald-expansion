@@ -1114,3 +1114,19 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/HealingHut/scripts.inc"
 
 	.include "data/maps/MorningIsland/scripts.inc"
+
+	.include "data/maps/FuneralBuilding/scripts.inc"
+
+	.include "data/maps/FuneralBuildingBackRoom/scripts.inc"
+
+	.include "data/maps/MorningShop/scripts.inc"
+
+	.include "data/maps/MorningHouse1/scripts.inc"
+
+	.include "data/maps/MorningManor/scripts.inc"
+
+	.include "data/maps/MorningManorUpper/scripts.inc"
+
+	.include "data/maps/MorningForest/scripts.inc"
+
+	.include "data/maps/MorningCave/scripts.inc"

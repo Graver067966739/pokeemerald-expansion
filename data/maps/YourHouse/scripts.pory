@@ -2,7 +2,7 @@ mapscripts YourHouse_MapScripts{}
 
 script GetRunningShoes
 {
-    lock
+    lockall
     if (!flag (FLAG_SYS_B_DASH))
     {
         msgbox("You put on your running shoes")
@@ -10,7 +10,7 @@ script GetRunningShoes
     }
     else
     {
-        msgbox("It's full of outfits. \nToo much work to change into them")
+        msgbox("You already have\nyour shoes.$")
     }
     waitmessage
     releaseall
@@ -18,20 +18,20 @@ script GetRunningShoes
 
 }
 
-script UnlockOutfit3
+script Sibling
 {
-    lock
-    msgbox("unlock")
+    lockall
+    msgbox("Now where was it....")
+    //Common_Movement_ExclamationMark
     waitmessage
-    callnative(Script_UnlockOutfit3)
     releaseall
     end
 }
 
 script OpenWardrobe
 {
-    lock
-    msgbox("test")
+    lockall
+    callnative(Script_UnlockOutfit3)
     FadeScreen(FADE_TO_BLACK)
     callnative(Script_OpenOutfitMenu)
     waitstate

@@ -4,7 +4,7 @@ YourHouse_MapScripts::
 
 GetRunningShoes::
 # 5 "data/maps/YourHouse/scripts.pory"
-	lock
+	lockall
 # 6 "data/maps/YourHouse/scripts.pory"
 	goto_if_unset FLAG_SYS_B_DASH, GetRunningShoes_2
 # 13 "data/maps/YourHouse/scripts.pory"
@@ -24,15 +24,13 @@ GetRunningShoes_2:
 	goto GetRunningShoes_1
 
 
-UnlockOutfit3::
+Sibling::
 # 23 "data/maps/YourHouse/scripts.pory"
-	lock
+	lockall
 # 24 "data/maps/YourHouse/scripts.pory"
-	msgbox UnlockOutfit3_Text_0
-# 25 "data/maps/YourHouse/scripts.pory"
-	waitmessage
+	msgbox Sibling_Text_0
 # 26 "data/maps/YourHouse/scripts.pory"
-	callnative Script_UnlockOutfit3
+	waitmessage
 # 27 "data/maps/YourHouse/scripts.pory"
 	releaseall
 	end
@@ -40,9 +38,9 @@ UnlockOutfit3::
 
 OpenWardrobe::
 # 33 "data/maps/YourHouse/scripts.pory"
-	lock
+	lockall
 # 34 "data/maps/YourHouse/scripts.pory"
-	msgbox OpenWardrobe_Text_0
+	callnative Script_UnlockOutfit3
 # 35 "data/maps/YourHouse/scripts.pory"
 	FadeScreen FADE_TO_BLACK
 # 36 "data/maps/YourHouse/scripts.pory"
@@ -60,12 +58,8 @@ GetRunningShoes_Text_0:
 
 GetRunningShoes_Text_1:
 # 13 "data/maps/YourHouse/scripts.pory"
-	.string "It's full of outfits. \nToo much work to change into them$"
+	.string "You already have\nyour shoes.$"
 
-UnlockOutfit3_Text_0:
+Sibling_Text_0:
 # 24 "data/maps/YourHouse/scripts.pory"
-	.string "unlock$"
-
-OpenWardrobe_Text_0:
-# 34 "data/maps/YourHouse/scripts.pory"
-	.string "test$"
+	.string "now where was it....$"

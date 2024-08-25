@@ -167,7 +167,13 @@
     "PacifidlogTown_House2",
     "PacifidlogTown_House3",
     "PacifidlogTown_House4",
-    "PacifidlogTown_House5"
+    "PacifidlogTown_House5",
+    "FuneralBuilding",
+    "FuneralBuildingBackRoom",
+    "MorningShop",
+    "MorningHouse1",
+    "MorningManor",
+    "MorningManorUpper"
   ],
   "gMapGroup_IndoorPetalburg": [
     "PetalburgCity_WallysHouse",
@@ -443,7 +449,9 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "MorningForest",
+    "MorningCave"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Sibling",
       "flag": "0"
     }
   ],
@@ -63,8 +63,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
-      "y": 1,
+      "x": 5,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "GetRunningShoes"
@@ -79,11 +79,11 @@
     },
     {
       "type": "sign",
-      "x": 18,
-      "y": 1,
+      "x": 6,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "UnlockOutfit3"
+      "script": "GetRunningShoes"
     }
   ]
 }

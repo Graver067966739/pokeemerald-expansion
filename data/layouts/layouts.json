@@ -1346,8 +1346,8 @@
       "name": "PetalburgWoods_Layout",
       "width": 48,
       "height": 44,
-      "primary_tileset": "gTileset_Arid_Terrain",
-      "secondary_tileset": "gTileset_Arid_Town",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_UnionRoom",
       "border_filepath": "data/layouts/PetalburgWoods/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgWoods/map.bin"
     },
@@ -4544,12 +4544,92 @@
     {
       "id": "LAYOUT_MORNING_ISLAND",
       "name": "MorningIsland_Layout",
-      "width": 30,
-      "height": 33,
+      "width": 38,
+      "height": 36,
       "primary_tileset": "gTileset_Grassy_Terrain",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Morning_Island",
       "border_filepath": "data/layouts/MorningIsland/border.bin",
       "blockdata_filepath": "data/layouts/MorningIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUNERAL_BUILDING",
+      "name": "FuneralBuilding_Layout",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_BasicBuilding",
+      "secondary_tileset": "gTileset_Morning_Interior",
+      "border_filepath": "data/layouts/FuneralBuilding/border.bin",
+      "blockdata_filepath": "data/layouts/FuneralBuilding/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUNERAL_BUILDING_BACK_ROOM",
+      "name": "FuneralBuildingBackRoom_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_BasicBuilding",
+      "secondary_tileset": "gTileset_Morning_Interior",
+      "border_filepath": "data/layouts/FuneralBuildingBackRoom/border.bin",
+      "blockdata_filepath": "data/layouts/FuneralBuildingBackRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_SHOP",
+      "name": "MorningShop_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/MorningShop/border.bin",
+      "blockdata_filepath": "data/layouts/MorningShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_HOUSE1",
+      "name": "MorningHouse1_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_BasicBuilding",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/MorningHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/MorningHouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_MANOR",
+      "name": "MorningManor_Layout",
+      "width": 25,
+      "height": 13,
+      "primary_tileset": "gTileset_BasicBuilding",
+      "secondary_tileset": "gTileset_Laboratory",
+      "border_filepath": "data/layouts/MorningManor/border.bin",
+      "blockdata_filepath": "data/layouts/MorningManor/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_MANOR_UPPER",
+      "name": "MorningManorUpper_Layout",
+      "width": 25,
+      "height": 13,
+      "primary_tileset": "gTileset_BasicBuilding",
+      "secondary_tileset": "gTileset_Laboratory",
+      "border_filepath": "data/layouts/MorningManorUpper/border.bin",
+      "blockdata_filepath": "data/layouts/MorningManorUpper/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_FOREST",
+      "name": "MorningForest_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/MorningForest/border.bin",
+      "blockdata_filepath": "data/layouts/MorningForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MORNING_CAVE",
+      "name": "MorningCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MorningCave/border.bin",
+      "blockdata_filepath": "data/layouts/MorningCave/map.bin"
     }
   ]
 }
