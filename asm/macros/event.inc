@@ -2415,3 +2415,9 @@
 	.macro togglefakertc
 	callnative Script_ToggleFakeRtc
 	.endm
+
+	.macro setobjectnewmovementtype localId:req, movementType:req
+    setvar VAR_0x8005, \localId
+    setvar VAR_0x8006, \movementType
+    special SetObjectMovementType
+    .endm

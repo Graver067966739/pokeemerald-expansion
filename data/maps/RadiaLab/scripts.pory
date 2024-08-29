@@ -42,6 +42,7 @@ script Radia_Lab_Proffesor
 		faceplayer
 		msgbox ("I already gave you a pokedex\nnow please leave\nI am busy.")
 		applymovement (VAR_LAST_TALKED, LookBack)
+		waitmovement(0)
 		releaseall
 		end
 	}

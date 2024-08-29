@@ -244,33 +244,50 @@
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_BUSINESSMAN                241
 
-#define OBJ_EVENT_GFX_DUMMY1                     242 //freebie
-#define OBJ_EVENT_GFX_DUMMY2                     243 //freebie
+#define OBJ_EVENT_GFX_BRENDAN2_NORMAL            242
+#define OBJ_EVENT_GFX_BRENDAN2_FIELD_MOVE        243
+#define OBJ_EVENT_GFX_BRENDAN2_SURFING           244
+#define OBJ_EVENT_GFX_BRENDAN2_UNDERWATER        245
+#define OBJ_EVENT_GFX_BRENDAN2_FISHING           246
+#define OBJ_EVENT_GFX_BRENDAN2_WATERING          247
+#define OBJ_EVENT_GFX_BRENDAN2_MACH_BIKE         248
+#define OBJ_EVENT_GFX_BRENDAN2_ACRO_BIKE         249
+#define OBJ_EVENT_GFX_BRENDAN2_DECORATING        250
 
-#define OBJ_EVENT_GFX_BRENDAN3_NORMAL            244
-#define OBJ_EVENT_GFX_BRENDAN3_FIELD_MOVE        245
-#define OBJ_EVENT_GFX_BRENDAN3_SURFING           246
-#define OBJ_EVENT_GFX_BRENDAN3_UNDERWATER        247
-#define OBJ_EVENT_GFX_BRENDAN3_FISHING           248
-#define OBJ_EVENT_GFX_BRENDAN3_WATERING          249
-#define OBJ_EVENT_GFX_BRENDAN3_MACH_BIKE         250
-#define OBJ_EVENT_GFX_BRENDAN3_ACRO_BIKE         251
-#define OBJ_EVENT_GFX_BRENDAN3_DECORATING        252
+#define OBJ_EVENT_GFX_MAY2_NORMAL                251
+#define OBJ_EVENT_GFX_MAY2_FIELD_MOVE            252
+#define OBJ_EVENT_GFX_MAY2_SURFING               253
+#define OBJ_EVENT_GFX_MAY2_UNDERWATER            254
+#define OBJ_EVENT_GFX_MAY2_FISHING               255
+#define OBJ_EVENT_GFX_MAY2_WATERING              256
+#define OBJ_EVENT_GFX_MAY2_MACH_BIKE             257
+#define OBJ_EVENT_GFX_MAY2_ACRO_BIKE             258
+#define OBJ_EVENT_GFX_MAY2_DECORATING            259              
 
-#define OBJ_EVENT_GFX_MAY3_NORMAL                253
-#define OBJ_EVENT_GFX_MAY3_FIELD_MOVE            254
-#define OBJ_EVENT_GFX_MAY3_SURFING               255
-#define OBJ_EVENT_GFX_MAY3_UNDERWATER            256
-#define OBJ_EVENT_GFX_MAY3_FISHING               257
-#define OBJ_EVENT_GFX_MAY3_WATERING              258
-#define OBJ_EVENT_GFX_MAY3_MACH_BIKE             259
-#define OBJ_EVENT_GFX_MAY3_ACRO_BIKE             260
-#define OBJ_EVENT_GFX_MAY3_DECORATING            261              
+#define OBJ_EVENT_GFX_BRENDAN3_NORMAL            260
+#define OBJ_EVENT_GFX_BRENDAN3_FIELD_MOVE        261
+#define OBJ_EVENT_GFX_BRENDAN3_SURFING           262
+#define OBJ_EVENT_GFX_BRENDAN3_UNDERWATER        263
+#define OBJ_EVENT_GFX_BRENDAN3_FISHING           264
+#define OBJ_EVENT_GFX_BRENDAN3_WATERING          265
+#define OBJ_EVENT_GFX_BRENDAN3_MACH_BIKE         266
+#define OBJ_EVENT_GFX_BRENDAN3_ACRO_BIKE         267
+#define OBJ_EVENT_GFX_BRENDAN3_DECORATING        268
+
+#define OBJ_EVENT_GFX_MAY3_NORMAL                269
+#define OBJ_EVENT_GFX_MAY3_FIELD_MOVE            270
+#define OBJ_EVENT_GFX_MAY3_SURFING               271
+#define OBJ_EVENT_GFX_MAY3_UNDERWATER            272
+#define OBJ_EVENT_GFX_MAY3_FISHING               273
+#define OBJ_EVENT_GFX_MAY3_WATERING              274
+#define OBJ_EVENT_GFX_MAY3_MACH_BIKE             275
+#define OBJ_EVENT_GFX_MAY3_ACRO_BIKE             276
+#define OBJ_EVENT_GFX_MAY3_DECORATING            277              
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        262
+#define NUM_OBJ_EVENT_GFX                        278
 
 
 // These are dynamic object gfx ids.
@@ -397,8 +414,10 @@
 #define OBJ_EVENT_PAL_TAG_LUGIA                   0x1121
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
-#define OBJ_EVENT_PAL_TAG_OUTFIT3                 0x1124
-#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1125
+#define OBJ_EVENT_PAL_TAG_BRENDAN2                0x1124
+#define OBJ_EVENT_PAL_TAG_MAY2                    0x1125
+#define OBJ_EVENT_PAL_TAG_OUTFIT3                 0x1126
+#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1127
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

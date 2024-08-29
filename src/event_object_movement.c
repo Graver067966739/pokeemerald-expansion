@@ -485,6 +485,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_BrendanReflection,     OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION},
     {gObjectEventPal_BridgeReflection,      OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION},
     {gObjectEventPal_PlayerUnderwater,      OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER},
+    {gObjectEventPal_Brendan2,              OBJ_EVENT_PAL_TAG_BRENDAN2},
+    {gObjectEventPal_May2,                  OBJ_EVENT_PAL_TAG_MAY2},
     {gObjectEventPal_Outfit3,               OBJ_EVENT_PAL_TAG_OUTFIT3},
     {gObjectEventPal_QuintyPlump,           OBJ_EVENT_PAL_TAG_QUINTY_PLUMP},
     {gObjectEventPal_QuintyPlumpReflection, OBJ_EVENT_PAL_TAG_QUINTY_PLUMP_REFLECTION},
@@ -11002,4 +11004,16 @@ bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct S
         return TRUE;
     }
     return FALSE;
+}
+
+void SetObjectMovementType(void)
+{
+    struct ObjectEvent *objectEvent = &gObjectEvents[GetObjectEventIdByLocalId(gSpecialVar_0x8005)];
+    u8 movementType = gSpecialVar_0x8006;
+    
+    objectEvent->movementType = movementType;
+    objectEvent->directionSequenceIndex = 0;
+    objectEvent->playerCopyableMovement = 0;
+    gSprites[objectEvent->spriteId].callback = sMovementTypeCallbacks[movementType];
+    gSprites[objectEvent->spriteId].data[1] = 0;
 }

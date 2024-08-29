@@ -1,4 +1,90 @@
-mapscripts YourHouse_MapScripts{}
+const LOCALID_MOM = 1
+
+mapscripts YourHouse_MapScripts
+{
+    MAP_SCRIPT_ON_LOAD
+    {
+        if (flag (FLAG_SYS_B_DASH))
+        {
+            setmetatile (5, 7, METATILE_BasicBuilding_Shoes_Taken, FALSE)
+            special (DrawWholeMapView)
+        }
+
+        if (var (VAR_INTRO_STATE) == 0)
+        {
+            setobjectxyperm (LOCALID_MOM, 11, 7)
+        }
+    }
+    
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_INTRO_STATE, 0: WakeUp
+    ]
+}
+
+script WakeUp
+{
+    lock
+    applymovement (LOCALID_MOM, MomEnter)
+    waitmovement (0)
+    applymovement (LOCALID_MOM, Common_Movement_ExclamationMark)
+    waitmovement (0)
+    applymovement (LOCALID_MOM, MomWalkCloser)
+    waitmovement (0)
+    msgbox ("{PLAYER}\pYou're not awake yet?!\pCome on, get ready\nWe're leaving very soon!$")
+    waitmessage
+    applymovement (LOCALID_MOM, MomLeaveRoom)
+    waitmovement (0)
+    setvar (VAR_INTRO_STATE, 1)
+    setobjectxy(LOCALID_MOM, 2, 9)
+    setobjectnewmovementtype (LOCALID_MOM, MOVEMENT_TYPE_FACE_UP_AND_RIGHT)
+    release
+    end
+}
+
+movement MomEnter
+{
+    walk_right * 2
+    walk_up * 3
+    walk_right * 2
+    step_end
+}
+
+movement MomWalkCloser
+{
+    walk_right * 2
+    walk_up * 2
+    walk_in_place_right
+    step_end
+}
+
+movement MomLeaveRoom
+{
+    walk_down * 2
+    walk_left * 4
+    walk_down * 4
+    walk_left * 5
+    step_end
+}
+
+script CantLeave
+{
+    lock
+    applymovement (LOCALID_MOM, Common_Movement_ExclamationMark)
+    waitmovement (0)
+    msgbox ("You can't leave\nlike that.\pGo to your dresser\nand change into your\lFANCY ATTIRE.$")
+    waitmessage
+    applymovement (OBJ_EVENT_ID_PLAYER, PlayerUp)
+    waitmovement (0)
+    release
+    end
+}
+
+movement PlayerUp
+{
+ walk_up
+ step_end
+}
 
 script GetRunningShoes
 {
@@ -23,7 +109,7 @@ script GetRunningShoes
 script Sibling
 {
     lockall
-    msgbox("Now where was it{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.")
+    msgbox("Now where was it.{PAUSE 20}.{PAUSE 20}.{PAUSE 20}.")
     //Common_Movement_ExclamationMark
     waitmessage
     releaseall
@@ -33,7 +119,12 @@ script Sibling
 script OpenWardrobe
 {
     lockall
-    callnative(Script_UnlockOutfit3)
+    if (!flag (checkoutfitflag(OUTFIT_2)))
+    {
+        msgbox("test")
+        waitmessage
+        callnative (Script_UnlockOutfit2)
+    }
     FadeScreen(FADE_TO_BLACK)
     callnative(Script_OpenOutfitMenu)
     waitstate

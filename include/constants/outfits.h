@@ -16,7 +16,7 @@
 //! outfits
 #define OUTFIT_NONE 0
 #define OUTFIT_USUAL_GREEN 1
-#define OUTFIT_UNUSUAL_RED 2
+#define OUTFIT_2 2
 #define OUTFIT_3 3
 #define OUTFIT_COUNT 4
 

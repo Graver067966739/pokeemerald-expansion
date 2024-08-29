@@ -36,6 +36,8 @@ Radia_Lab_Proffesor::
 # 44 "data/maps/RadiaLab/scripts.pory"
 	applymovement VAR_LAST_TALKED, LookBack
 # 45 "data/maps/RadiaLab/scripts.pory"
+	waitmovement 0
+# 46 "data/maps/RadiaLab/scripts.pory"
 	releaseall
 	end
 
@@ -71,9 +73,9 @@ Radia_Lab_Proffesor_1:
 	end
 
 
-# 51 "data/maps/RadiaLab/scripts.pory"
+# 52 "data/maps/RadiaLab/scripts.pory"
 LookBack:
-# 53 "data/maps/RadiaLab/scripts.pory"
+# 54 "data/maps/RadiaLab/scripts.pory"
 	face_original_direction
 	step_end
 

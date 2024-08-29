@@ -6,13 +6,13 @@ static const u8 sText_OutfitName_UsualGreen[] = _("USUAL GREEN");
 static const u8 sText_OutfitDesc_UsualGreen[] = _(
     "The usual, but\nbasic OUTFIT.");
 
-static const u8 sText_OutfitName_UnusualRed[] = _("UNUSUAL RED");
-static const u8 sText_OutfitDesc_UnusualRed[] = _(
-    "Rather unusual,\nbut still basic\nOUTFIT.");
+static const u8 sText_OutfitName_2[] = _("Fancy Attire");
+static const u8 sText_OutfitDesc_2[] = _(
+    "An outfit for\nspecial\noccasions");
 
-static const u8 sText_OutfitName_3[] = _("Tedious Attire");
+static const u8 sText_OutfitName_3[] = _("Field Attire");
 static const u8 sText_OutfitDesc_3[] = _(
-    "An outfit that stresses\nyou out just by\nlooking at it.");
+    "A rugged\nOUTFIT");
 #endif
 
 static const u16 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U16("graphics/pokenav/region_map/brendan_icon.4bpp");
@@ -143,28 +143,29 @@ const struct Outfit gOutfits[OUTFIT_COUNT] =
         //! unlike region map. (probably should split them tbh)
         .iconsFP = sFrontierPassPlayerIcons_BrendanMay_Gfx,
     },
-    [OUTFIT_UNUSUAL_RED] = {
-        .isHidden = FALSE,
-        .prices = { 200, 500 },
-        #if MODERN == 1
-        .name = COMPOUND_STRING("UNUSUAL RED"),
-        .desc = COMPOUND_STRING("Rather unusual,\nbut still basic\nOUTFIT."),
-        #else
-        .name = sText_OutfitName_UnusualRed,
-        .desc = sText_OutfitDesc_UnusualRed,
-        #endif
-        .trainerPics = TRAINER_ID(RUBY_SAPPHIRE_BRENDAN, RUBY_SAPPHIRE_MAY),
-        .avatarGfxIds = AVATAR_GFX_ID(OUTFIT_RS_BRENDAN, OUTFIT_RS_MAY),
-        .animGfxIds = ANIM_GFX_ID(OUTFIT_RS_BRENDAN, OUTFIT_RS_MAY),
-        .iconsRM = REGION_MAP_GFX(RSBrendan, RSMay),
-        .iconsFP = sFrontierPassPlayerIcons_RSBrendanMay_Gfx,
-    },
-        [OUTFIT_3] = {
+    [OUTFIT_2] = {
         .isHidden = FALSE,
         .prices = { 200, 500 },
         #if MODERN == 1
         .name = COMPOUND_STRING("Fancy Attire"),
-        .desc = COMPOUND_STRING("A nice,\noutfit."),
+        .desc = COMPOUND_STRING("An outfit for\nspecial\noccasions"),
+        #else
+        .name = sText_OutfitName_2,
+        .desc = sText_OutfitDesc_2,
+        #endif
+        .trainerPics = TRAINER_ID(RUBY_SAPPHIRE_BRENDAN, RUBY_SAPPHIRE_MAY),
+        .avatarGfxIds = AVATAR_GFX_ID(BRENDAN2, MAY2),
+        .animGfxIds = ANIM_GFX_ID(BRENDAN2, MAY2),
+        .iconsRM = REGION_MAP_GFX(RSBrendan, RSMay),
+        .iconsFP = sFrontierPassPlayerIcons_RSBrendanMay_Gfx,
+    },
+    
+    [OUTFIT_3] = {
+        .isHidden = TRUE,
+        .prices = { 200, 500 },
+        #if MODERN == 1
+        .name = COMPOUND_STRING("Field Attire"),
+        .desc = COMPOUND_STRING("A rugged,\noutfit."),
         #else
         .name = sText_OutfitName_3,
         .desc = sText_OutfitDesc_3,
