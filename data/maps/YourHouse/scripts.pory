@@ -1,4 +1,5 @@
 const LOCALID_MOM = 1
+const LOCALID_SIBLING = 2
 
 mapscripts YourHouse_MapScripts
 {
@@ -67,23 +68,99 @@ movement MomLeaveRoom
     step_end
 }
 
-script CantLeave
+movement FaceDown 
+{
+    walk_in_place_down
+}
+
+script CheckLeave
 {
     lock
-    applymovement (LOCALID_MOM, Common_Movement_ExclamationMark)
-    waitmovement (0)
-    msgbox ("You can't leave\nlike that.\pGo to your dresser\nand change into your\lFANCY ATTIRE.$")
-    waitmessage
-    applymovement (OBJ_EVENT_ID_PLAYER, PlayerUp)
-    waitmovement (0)
+    iswearingoutfit(OUTFIT_2)
+    if (var(VAR_RESULT) == TRUE) 
+    {
+        applymovement (LOCALID_SIBLING, SiblingLeaveRoom)
+        waitmovement (0)
+        applymovement (LOCALID_MOM, Common_Movement_ExclamationMark)
+        waitmovement (0)
+        applymovement (LOCALID_MOM, Common_Movement_FaceDown)
+        waitmovement (0)
+        msgbox ("Ok good\lyou're all ready\pLet's go!")
+        waitmessage
+        setvar (VAR_INTRO_STATE, 2)
+        getplayerxy (VAR_TEMP_2, VAR_TEMP_3)
+        if (var (VAR_TEMP_2) == 3)//If player is on the left
+        {
+            applymovement (LOCALID_MOM, MomLeaveR)
+            waitmovement (0)
+            applymovement (LOCALID_SIBLING, SiblingLeaveR)
+            waitmovement (0)
+        }
+        else
+        {
+            applymovement (LOCALID_MOM, MomLeaveL)
+            waitmovement (0)
+            applymovement (LOCALID_SIBLING, SiblingLeaveL)
+            waitmovement (0)
+        }
+
+    }
+    else
+    {
+        applymovement (LOCALID_MOM, Common_Movement_ExclamationMark)
+        waitmovement (0)
+        applymovement (LOCALID_MOM, Common_Movement_FaceDown)
+        waitmovement (0)
+        msgbox ("You can't leave\nlike that.\pGo to your dresser\nand change into your\lFANCY ATTIRE.$")
+        waitmessage
+        applymovement (OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+        waitmovement (0)
+    }
+
     release
     end
 }
 
-movement PlayerUp
+movement MomLeaveR 
 {
- walk_up
- step_end
+    walk_right * 2
+    walk_down * 2
+    delay_8
+	set_invisible
+    step_end
+}
+movement MomLeaveL 
+{
+    walk_right
+    walk_down * 2
+    delay_8
+	set_invisible
+    step_end
+}
+movement SiblingLeaveR 
+{
+    walk_down * 2
+    delay_8
+	set_invisible
+    step_end
+}
+movement SiblingLeaveL 
+{
+    walk_left
+    walk_down * 2
+    delay_8
+	set_invisible
+    step_end
+}
+
+movement SiblingLeaveRoom 
+{
+    walk_down
+    walk_left * 4
+    walk_up
+    walk_left * 8
+    walk_down
+    step_end
 }
 
 script GetRunningShoes
@@ -119,9 +196,10 @@ script Sibling
 script OpenWardrobe
 {
     lockall
-    if (!flag (checkoutfitflag(OUTFIT_2)))
+    checkoutfitflag(OUTFIT_2) // only returns TRUE and FALSE
+    if (var(VAR_RESULT) == FALSE) 
     {
-        msgbox("test")
+        msgbox("unlocking outfit 2")
         waitmessage
         callnative (Script_UnlockOutfit2)
     }

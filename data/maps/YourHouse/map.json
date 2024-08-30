@@ -65,7 +65,7 @@
       "elevation": 0,
       "var": "VAR_INTRO_STATE",
       "var_value": "1",
-      "script": "CantLeave"
+      "script": "CheckLeave"
     },
     {
       "type": "trigger",
@@ -74,7 +74,7 @@
       "elevation": 0,
       "var": "VAR_INTRO_STATE",
       "var_value": "1",
-      "script": "CantLeave"
+      "script": "CheckLeave"
     },
     {
       "type": "trigger",
